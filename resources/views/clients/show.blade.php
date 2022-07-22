@@ -6,10 +6,12 @@
   <p class="type">Code - {{ $client->code }}</p>
   <p class="type">Name - {{ $client->name }}</p>
   <p class="base">Desc - {{ $client->desc }}</p>
-  <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
+  <p class="base">Active - {{ $client->active }}</p>
+  <p class="base">Country - {{ $client->country }}</p>
+<form action="{{ route('clients.destroy', $client->id) }}" method="POST">
     @csrf
     @method('DELETE')
-    <button>Complete Order</button>
+    <button>Delete Client</button>
   </form>
 </div>
 <a href="{{ route('clients.index') }}" class="back"><- Back to all clients</a>

@@ -38,7 +38,7 @@ class ClientController extends Controller
   }
 
   public function destroy($id) {
-    $client = Pizza::findOrFail($id);
+    $client = Client::findOrFail($id);
     $client->delete();
     return redirect('/clients');
   }

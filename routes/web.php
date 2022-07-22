@@ -52,8 +52,8 @@ Route::get('/register', function() {
 
 Route::get('/clients', 'App\Http\Controllers\ClientController@index')->name('clients.index');
 Route::post('/clients', 'App\Http\Controllers\ClientController@store')->name('clients.store');
-// Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show')->name('clients.show');
-Route::get('/clients/create', 'App\Http\Controllers\ClientController@create')->name('clients.create');;
+Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show')->name('clients.show');
+Route::get('/clients-create', 'App\Http\Controllers\ClientController@create')->name('clients.create');;
 Route::delete('/clients/{id}', 'App\Http\Controllers\ClientController@destroy')->name('clients.destroy');;
 
 Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where');
