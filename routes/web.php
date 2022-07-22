@@ -26,13 +26,10 @@ Route::get('/test', function() {
         ['name'=> 'Client 33', 'code' => '33'],
         ['name'=> 'Client 44', 'code' => '44']
     ];
-
-    //return view('test');
-
     return view('test', [
         'clients' => $clients
     ]);
 });
 
-Route::get('/clients', 'ClientController@index');
-Route::get('/clients/{id}', 'ClientController@show');
+Route::get('/clients', 'App\Http\Controllers\ClientController@index');
+Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show');
