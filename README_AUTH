@@ -29,3 +29,10 @@
         `public function __construct(){ $this->middleware('auth'); }`
 
 #### AUTHENTICATION
+
+-   Login
+-   Register
+
+-   To Disable Registeration
+    -   Deregister `register` route
+        `Auth::routes(['register' => false]);`

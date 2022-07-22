@@ -9,7 +9,7 @@
         @foreach($clients as $client)
           <div >
             <div>---------------------------------------------------------------------</div>
-            <div><b><u><a href="{{ route('clients.show', $client->id) }}">{{ $client->code}}</a></u></b> &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;  Name: {{ $client->code}}, Country: {{ $client->country}}, Active: {{ $client->active}}, Details: {{ $client->desc}}</div>
+            <div><b><u><a href="{{ route('clients.show', $client->id) }}">{{ $client->code}}</a></u></b> &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;  Name: {{ $client->name}}, Country: {{ $client->country}}, Active: {{ $client->active}}, Details: {{ $client->desc}}</div>
           </div>
         @endforeach
     </div>
