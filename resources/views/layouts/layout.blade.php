@@ -40,12 +40,17 @@
                 cursor: pointer;
             }
 
-            button {
+            button[type="submit"] {
                 border: 1px solid #cccccc;
                 height: 30px;
                 border-radius:5px;
                 width: 101px;
                 cursor: pointer;
+            }
+            a {
+                    color: rgba(74,85,104,1);
+                        font-size: .875rem;
+                            text-decoration: underline;
             }
         </style>
     </head>
