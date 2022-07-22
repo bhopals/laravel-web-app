@@ -16,6 +16,6 @@
     <div><br/></div>
     <div>&nbsp;</div>
 
-    <div><b><u><a href="{{ route('clients.create') }}" class="back">Create New Client index</a></u></b></div>
+    <div><b><u><a href="{{ route('clients.create') }}" class="back">Create New Client</a></u></b></div>
 </div>
 @endsection
