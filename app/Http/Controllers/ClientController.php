@@ -26,11 +26,14 @@ class ClientController extends Controller
   public function store() {
 
     $client = new Client();
+    $client->active = 'Y';
     $client->name = request('name');
     $client->code = request('code');
     $client->desc = request('desc');
+    $client->country = request('country');
+
     $client->save();
-    return redirect('/')->with('mssg', 'Thanks for your doing business with us!');
+    return redirect('/clients')->with('mssg', 'Thanks for your doing business with us!');
 
   }
 

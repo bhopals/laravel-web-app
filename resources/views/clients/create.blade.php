@@ -2,33 +2,22 @@
 
 @section('content')
 <div class="wrapper create-pizza">
-  <h1>Create a New Pizza</h1>
+  <h1>Create a New Client</h1>
   <form action="{{ route('clients.store') }}" method="POST">
     @csrf
-    <label for="name">Your name:</label>
+    <label for="name">Client name:</label>
     <input type="text" name="name" id="name" required>
-    <label for="type">Choose type of pizza:</label>
-    <select name="type" id="type">
-      <option value="margarita">Margarita</option>
-      <option value="hawaiian">Hawaiian</option>
-      <option value="veg supreme">Veg Supreme</option>
-      <option value="volcano">Volcano</option>
-    </select>
-    <label for="base">Choose crust:</label>
-    <select name="base" id="base">
-      <option value="thick">Thick</option>
-      <option value="thin & crispy">Thin & Crispy</option>
-      <option value="cheese crust">Cheese Crust</option>
-      <option value="garlic crust">Garlic Crust</option>
-    </select>
-    <fieldset>
-      <label>Extra toppings:</label>
-      <input type="checkbox" name="toppings[]" value="mushrooms">Mushrooms<br />
-      <input type="checkbox" name="toppings[]" value="peppers">Peppers<br />
-      <input type="checkbox" name="toppings[]" value="garlic">Garlic<br />
-      <input type="checkbox" name="toppings[]" value="olives">Olives<br />
-    </fieldset>
-    <input type="submit" value="Order Pizza">
+    
+    <label for="code">Client Code:</label>
+    <input type="text" name="code" id="code" required>
+    
+    <label for="desc">Client Desc:</label>
+    <input type="text" name="desc" id="desc" required>
+
+    <label for="country">Client Countyr:</label>
+    <input type="text" name="country" id="country" required>
+    
+    <input type="submit" value="Create Client">
   </form>
 </div>
 @endsection
