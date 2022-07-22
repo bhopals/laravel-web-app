@@ -24,6 +24,11 @@
         </div>
         <div><br/></div>
         <p class="mssg">{{ session('mssg') }}</p>
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ route('clients.index') }}"><b><u>Show client</u></b></a>
+            @endauth
+        @endif
         
     </div>
 </div>
