@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/test', function() {
+    $clients = [
+        ['name'=> 'Client 11', 'code' => '11'],
+        ['name'=> 'Client 22', 'code' => '22'],
+        ['name'=> 'Client 33', 'code' => '33'],
+        ['name'=> 'Client 44', 'code' => '44']
+    ];
+
+    //return view('test');
+
+    return view('test', [
+        'clients' => $clients
+    ]);
+});
+
+Route::get('/clients', 'ClientController@index');
+Route::get('/clients/{id}', 'ClientController@show');
