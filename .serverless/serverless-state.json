@@ -180,7 +180,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel-web-app/dev/1658355114073-2022-07-20T22:11:54.073Z/laravel-web-app.zip"
+                "S3Key": "serverless/laravel-web-app/dev/1658490714127-2022-07-22T11:51:54.127Z/laravel-web-app.zip"
               },
               "Handler": "public/index.php",
               "Runtime": "provided.al2",
@@ -208,7 +208,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel-web-app/dev/1658355114073-2022-07-20T22:11:54.073Z/laravel-web-app.zip"
+                "S3Key": "serverless/laravel-web-app/dev/1658490714127-2022-07-22T11:51:54.127Z/laravel-web-app.zip"
               },
               "Handler": "artisan",
               "Runtime": "provided.al2",
@@ -549,7 +549,7 @@
         ],
         "artifactsS3KeyDirname": "serverless/laravel-web-app/dev/code-artifacts",
         "artifact": "/Users/bsingh/git-repos/laravel-web-app/.serverless/laravel-web-app.zip",
-        "artifactDirectoryName": "serverless/laravel-web-app/dev/1658355114073-2022-07-20T22:11:54.073Z"
+        "artifactDirectoryName": "serverless/laravel-web-app/dev/1658490714127-2022-07-22T11:51:54.127Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -563,7 +563,7 @@
     "artifact": "/Users/bsingh/git-repos/laravel-web-app/.serverless/laravel-web-app.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/laravel-web-app/dev/1658355114073-2022-07-20T22:11:54.073Z",
+    "artifactDirectoryName": "serverless/laravel-web-app/dev/1658490714127-2022-07-22T11:51:54.127Z",
     "artifact": "laravel-web-app.zip"
   }
 }
