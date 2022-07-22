@@ -17,3 +17,7 @@
 
 6. `serverless deploy`
    Output of this command will return API URL - https://283iupsgdl.execute-api.us-west-2.amazonaws.com
+   Alternatively, you can get the APP URL from APIGATEWAY -> Stage -> URL
+
+7. DB - Update the .env file with DataBase Connection details
+   Refer for more details - https://laravel.com/docs/9.x/database
