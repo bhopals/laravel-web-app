@@ -1,0 +1,5 @@
+.create-client input[type="text"] {
+    border: 1px solid #000000;
+    height: 35px;
+    width: 80px;
+}

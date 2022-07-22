@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
 <div class="wrapper pizza-details">
@@ -8,11 +8,15 @@
   <p class="base">Desc - {{ $client->desc }}</p>
   <p class="base">Active - {{ $client->active }}</p>
   <p class="base">Country - {{ $client->country }}</p>
-<form action="{{ route('clients.destroy', $client->id) }}" method="POST">
+  <div><br/></div>
+  <div>&nbsp;</div>
+  <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
     @csrf
     @method('DELETE')
     <button>Delete Client</button>
   </form>
 </div>
-<a href="{{ route('clients.index') }}" class="back"><- Back to all clients</a>
+<div><br/></div>
+<div>&nbsp;</div>
+<b><u><a href="{{ route('clients.index') }}" class="back"><- Back to all clients</a></u></b>
 @endsection

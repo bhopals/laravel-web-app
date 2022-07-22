@@ -20,7 +20,7 @@ class ClientController extends Controller
     }
 
     public function create() {
-        return view('clients.create');
+        return view('create');
     }
 
   public function store() {
@@ -50,7 +50,7 @@ class ClientController extends Controller
 
      public function show($id) {
         $client = Client::findOrFail($id);
-        return view('clients.show', ['client' => $client]);
+        return view('show', ['client' => $client]);
     }
 }
 
