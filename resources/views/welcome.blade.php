@@ -24,7 +24,7 @@
         </div>
         <div><br/></div>
         <p class="mssg">{{ session('mssg') }}</p>
-        <a href="{{ route('clients.index') }}"><b><u>Show client</u></b></a>
+        
     </div>
 </div>
 @endsection

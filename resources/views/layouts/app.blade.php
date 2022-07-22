@@ -53,7 +53,7 @@
                 margin-bottom: 10px;
             }
 
-            button[type="submit"] {
+            button[type="submit"], button.delete-client {
                 border: 1px solid #cccccc;
                 height: 30px;
                 border-radius:5px;

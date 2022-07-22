@@ -13,7 +13,7 @@
   <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
     @csrf
     @method('DELETE')
-    <button>Delete Client</button>
+    <button class='delete-client'>Delete Client</button>
   </form>
 </div>
 <div><br/></div>

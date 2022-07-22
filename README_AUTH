@@ -15,4 +15,17 @@
 
 #### AUTHORIZATION
 
+-   To protect routes, there are two ways
+
+-   1. Restrict specefic ROUTES
+
+    -   Append `-> middleware('auth')` at the end of Routes
+    -   Example:
+        `Route::get('/clients', 'App\Http\Controllers\ClientController@index')->name('clients.index')->middleware('auth');`
+
+-   2. Restrict and Protect all the Methods in Controller
+    -   Add \_\_construct method in Controller
+    -   Example:
+        `public function __construct(){ $this->middleware('auth'); }`
+
 #### AUTHENTICATION
