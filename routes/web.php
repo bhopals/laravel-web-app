@@ -52,7 +52,9 @@ Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show')->name(
 Route::get('/clients-create', 'App\Http\Controllers\ClientController@create')->name('clients.create')->middleware('auth');
 Route::delete('/clients/{id}', 'App\Http\Controllers\ClientController@destroy')->name('clients.destroy')->middleware('auth');
 
-Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where')->middleware('auth');;
+Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where')->middleware('auth');
+
+Route::get('/metadata', 'App\Http\Controllers\ClientController@metadata')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

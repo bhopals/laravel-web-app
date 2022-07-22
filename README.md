@@ -21,3 +21,6 @@
 
 7. DB - Update the .env file with DataBase Connection details
    Refer for more details - https://laravel.com/docs/9.x/database
+
+8. Request Details
+   Refer - https://laravel.com/docs/9.x/requests#accessing-the-request

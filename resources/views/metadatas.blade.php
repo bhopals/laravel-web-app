@@ -23,11 +23,11 @@
     <body class="antialiased">
         
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <div >Client List:</div> 
+            <div >MetaDataList List:</div> 
             <div class="ml-12">
-                @foreach($clients as $client)
+                @foreach($metadatas as $metadata)
                     <div class="ml-12">
-                        {{ $client['name']}}  - {{ $client['code']}} 
+                        {{ $metadata['id']}}  - {{ $metadata['value']}} 
                     </div>
                 @endforeach
             </div>

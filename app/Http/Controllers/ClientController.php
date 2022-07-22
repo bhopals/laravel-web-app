@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Client;
 
-
 class ClientController extends Controller
 {
 
@@ -51,6 +50,25 @@ class ClientController extends Controller
      public function show($id) {
         $client = Client::findOrFail($id);
         return view('show', ['client' => $client]);
+    }
+
+    public function metadata(Request $request) {
+        $metadatas = [
+            ['id'=> 'host', 'value' => $request->host()],
+            ['id'=> 'httpHost', 'value' => $request->httpHost()],
+            ['id'=> 'schemeAndHttpHost', 'value' => $request->schemeAndHttpHost()],
+            ['id'=> 'url', 'value' => $request->url()],
+            ['id'=> 'fullUrl', 'value' => $request->fullUrl()],
+            ['id'=> 'header', 'value' => $request->header('X-Header-Name')],
+            ['id'=> 'bearerToken', 'value' => $request->bearerToken()],
+            ['id'=> 'ip', 'value' => $request->ip()],
+//            ['id'=> 'inputs', 'value' => $request->collect()],
+        //   ['id'=> 'all inputs', 'value' => $request->all()],
+   //         ['id'=> 'contentType', 'value' => $request->getAcceptableContentTypes()],
+
+            
+        ];
+      return view('metadatas', ['metadatas' => $metadatas]);
     }
 }
 
