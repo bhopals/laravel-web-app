@@ -8,19 +8,46 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
+
+//    public function __construct(){
+//       $this->middleware('auth');
+//    }
+        
     public function index() {
-        // $clients = Client::all();
-        $clients = Client::orderBy('code', 'asc')->get();
+        //$clients = Client::orderBy('code', 'asc')->get();
+        $clients = Client::all();
         return view('clients', ['clients' => $clients]);
     }
 
-    public function show($id) {
-
+    public function create() {
+        return view('clients.create');
     }
+
+  public function store() {
+
+    $client = new Client();
+    $client->name = request('name');
+    $client->code = request('code');
+    $client->desc = request('desc');
+    $client->save();
+    return redirect('/')->with('mssg', 'Thanks for your doing business with us!');
+
+  }
+
+  public function destroy($id) {
+    $client = Pizza::findOrFail($id);
+    $client->delete();
+    return redirect('/clients');
+  }
 
     public function where($code) {
         $clients = Client::where('code', $code)->get();
         return view('clients', ['clients' => $clients]);
+    }
+
+     public function show($id) {
+        $client = Client::findOrFail($id);
+        return view('clients.show', ['client' => $client]);
     }
 }
 

@@ -31,6 +31,42 @@ Route::get('/test', function() {
     ]);
 });
 
-Route::get('/clients', 'App\Http\Controllers\ClientController@index');
-Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show');
+
+Route::get('/login', function() {
+    $clients = [
+        ['name'=> 'Client 11', 'code' => '11'],
+    ];
+    return view('test', [
+        'clients' => $clients
+    ]);
+})->name('login');
+
+Route::get('/register', function() {
+    $clients = [
+        ['name'=> 'Client 11', 'code' => '11'],
+    ];
+    return view('test', [
+        'clients' => $clients
+    ]);
+})->name('register');
+
+Route::get('/clients', 'App\Http\Controllers\ClientController@index')->name('clients.index');
+Route::post('/clients', 'App\Http\Controllers\ClientController@store')->name('clients.store');
+Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show')->name('clients.show');
+Route::get('/clients/create', 'App\Http\Controllers\ClientController@create')->name('clients.create');;
+Route::delete('/clients/{id}', 'App\Http\Controllers\ClientController@destroy')->name('clients.destroy');;
+
 Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where');
+
+
+// Route::get('/pizzas', 'PizzaController@index')->name('pizzas.index')->middleware('auth');
+// Route::get('/pizzas/create', 'PizzaController@create')->name('pizzas.create');
+// Route::post('/pizzas', 'PizzaController@store')->name('pizzas.store');
+// Route::get('/pizzas/{id}', 'PizzaController@show')->name('pizzas.show')->middleware('auth');
+// Route::delete('/pizzas/{id}', 'pizzaController@destroy')->name('pizzas.destroy')->middleware('auth');
+
+// Auth::routes([
+//   'register' => false,
+// ]);
+
+// Route::get('/home', 'HomeController@index')->name('home');
