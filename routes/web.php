@@ -33,3 +33,4 @@ Route::get('/test', function() {
 
 Route::get('/clients', 'App\Http\Controllers\ClientController@index');
 Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show');
+Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where');
