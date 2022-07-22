@@ -66,32 +66,32 @@ footer {
     margin: 20px auto;
 }
 
-/* create pizza form */
+/* create-client form */
 
-.create-pizza {
+.create-client {
     background: #f7f7f7;
     padding: 20px;
 }
 
-.create-pizza label,
-.create-pizza select {
+.create-client label,
+.create-client select {
     display: block;
 }
 
-.create-pizza label {
+.create-client label {
     margin-top: 30px;
 }
 
-.create-pizza select {
+.create-client select {
     padding: 8px;
     width: 200px;
 }
 
-.create-pizza input[type="checkbox"] {
+.create-client input[type="checkbox"] {
     margin: 10px;
 }
 
-.create-pizza input[type="submit"] {
+.create-client input[type="submit"] {
     background: #5e2195;
     padding: 8px 20px;
     color: #fff;
@@ -101,16 +101,16 @@ footer {
 
 /* pizza details page */
 
-.pizza-details {
+.create-client {
     background: #f7f7f7;
     padding: 20px;
 }
 
-.pizza-details p {
+.create-client p {
     margin: 20px 0;
     font-weight: bold;
 }
-.pizza-details button {
+.create-client button {
     background: #5e2195;
     padding: 8px 20px;
     color: #fff;
@@ -118,7 +118,7 @@ footer {
     margin-top: 20px;
 }
 
-.pizza-details a.back {
+.create-client a.back {
     display: block;
     text-align: center;
     margin-top: 30px;
@@ -126,29 +126,29 @@ footer {
     margin-bottom: 20px;
 }
 
-/* pizza index page */
+/* client index page */
 
-.pizza-index h1 {
+.create-client h1 {
     margin-bottom: 40px;
 }
 
-.pizza-index .pizza-item {
+.create-client .pizza-item {
     margin: 10px 0;
     padding: 12px;
     background: #f4f4f4;
 }
 
-.pizza-index .pizza-item img {
+.create-client .pizza-item img {
     width: 60px;
     display: inline-block;
 }
-.pizza-index .pizza-item h4 {
+.create-client .pizza-item h4 {
     display: inline-block;
     font-weight: normal;
     margin-left: 20px;
 }
 
-.pizza-index .pizza-item h4 a {
+.create-client .pizza-item h4 a {
     color: #777;
     text-decoration: none !important;
 }

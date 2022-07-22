@@ -14,8 +14,11 @@ use App\Http\Controllers\ClientController;
 |
 */
 
+Route::get('/', function() {
+   return view('welcome');
+});
 
-Route::get('/', 'App\Http\Controllers\ClientController@index')->name('index');
+// Route::get('/', 'App\Http\Controllers\ClientController@index')->name('index');
 
 
 Route::get('/test', function() {

@@ -37,7 +37,15 @@
             @endif
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                
+                 <div class="content">
+                    <div class="title m-b-md">
+                        <h1>Clients</h1>
+                        <h4>Best client services!!</h4>
+                    </div>
+                    <div><br/></div>
+                    <p class="mssg">{{ session('mssg') }}</p>
+                    <a href="{{ route('clients.index') }}"><b><u>Show client</u></b></a>
+                </div>
             </div>
         </div>
     </body>
