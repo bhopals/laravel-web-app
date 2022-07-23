@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-user Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage;
 class FileUploadController extends Controller
 {
 
@@ -19,21 +19,21 @@ class FileUploadController extends Controller
             
   public function saveImage(Request $request)
     {
-      $this.validate($request, [
-        'image' => 'required|image|max:2048'
-      ]);
+      // $this.validate($request, [
+      //   'image' => 'required|image|max:2048'
+      // ]);
 
       if($request->hasFile('image')) {
         
         $file = $request-> file('image');
         
-        $name = time().$file -> getClientOriginalName();
+        $name = time().'_'.$file -> getClientOriginalName();
 
         // $filepath = '/folder'.$name
-
-        Storage::disk('s3') -> put($filepath, file_get_contents($file))
+        $filepath = $name;
+        Storage::disk('s3') -> put($filepath, file_get_contents($file));
       }
-        return back()->with('success', 'Image Uploaded Succcessfully')
+        echo "File Upload Success!";
     }
 }
 
