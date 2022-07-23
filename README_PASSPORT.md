@@ -1,6 +1,6 @@
-### Authentication OAUTH setup
+### Passport Authentication
 
-##### Add Passport
+#### Install Passport packages and dependencies
 
 -   Install Passport via Composer Package Manager
 
@@ -12,17 +12,38 @@
 -   Install passport to get the scaffolding setup for passport
     `php artisan passport:install`
 
-    Encryption keys generated successfully.
-    Personal access client created successfully.
-    Client ID: 1
-    Client secret: v4acE4MO2zHe6y95KmE3N7MYG5TGCsWrPQ67MGTL
-    Password grant client created successfully.
-    Client ID: 2
-    Client secret: O9p3OyrbQnLDHTgop6Wljm5k9NusQwfAWRbzADTg
-
 REFERENCE - https://laravel.com/docs/9.x/passport#installation
 
-#### Add Client
+#### Configuration
+
+-   User.php
+
+    -   Add Passport dependency on the top `use Laravel\Passport\HasApiTokens;` (Line 10)
+    -   Refer `HasApiTokens` in the code - `use HasApiTokens` (Line 15)
+
+-   AuthServiceProvider.php
+
+    -   Add Passport Dependency `use Laravel\Passport\Passport;` (Line 7)
+    -   Update the `boot` method to have `Passport::routes();` (Line 28)
+
+-   auth.php
+
+    -   Update API Driver in `config/auth.php`
+
+    ```
+    'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ]
+    ```
+
+-   UserController
+    -   Add UserController to `register`, `login` User (Refer `UserController`)
+    -   Add Routes for API (Refer `routes/api.php`)
+
+REFERENCE - https://laravel.com/docs/9.x/passport#configuration
+
+#### Test API Endpoints
 
 -   Register Client
 
