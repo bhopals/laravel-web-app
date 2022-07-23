@@ -45,7 +45,7 @@ use App\Http\Controllers\ClientController;
 //     ]);
 // })->name('register');
 
-Route::get('/', function() { return view('welcome'); });
+Route::get('/', function() { return view('home'); });
 Route::get('/clients', 'App\Http\Controllers\ClientController@index')->name('clients.index')->middleware('auth');
 Route::post('/clients', 'App\Http\Controllers\ClientController@store')->name('clients.store')->middleware('auth');
 Route::get('/clients/{id}', 'App\Http\Controllers\ClientController@show')->name('clients.show')->middleware('auth');
