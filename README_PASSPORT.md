@@ -45,32 +45,36 @@ REFERENCE - https://laravel.com/docs/9.x/passport#configuration
 
 #### Test API Endpoints
 
--   Register Client
+-   You can use POSTMAN (https://www.postman.com/) for API Requests.
+-   Once Deployed, the URL `127.0.0.1:8000` will be replaved with the Deployed URL
 
-POST http://127.0.0.1:8000/api/register
+-   Testing STEPS
 
-```
-{
-    "name": "postman",
-    "email": "postman@test.com",
-    "password": "postman123456",
-    "c_password": "postman123456"
-}
-```
+    -   Register Client
+        POST http://127.0.0.1:8000/api/register
 
--   Login Client
+        ```
+        {
+            "name": "postman",
+            "email": "postman@test.com",
+            "password": "postman123456",
+            "c_password": "postman123456"
+        }
+        ```
 
-POST http://127.0.0.1:8000/api/login
+    -   Login Client
 
-```
-{
-    "name": "postman",
-    "email": "postman@test.com",
-}
-```
+        POST http://127.0.0.1:8000/api/login
 
--   Call API (Retrieve Records)
-    -   GET http://127.0.0.1:8000/api/clients
-    -   Select Authorization BEARER TOKEN TYPE
-    -   Use Token Retrieved from the Last Call and Send the Request.
-    -   You should be able to retrieve CLIENT Records
+        ```
+        {
+            "name": "postman",
+            "email": "postman@test.com",
+        }
+        ```
+
+    -   Call API (Retrieve Records)
+        -   GET http://127.0.0.1:8000/api/clients
+        -   Select Authorization BEARER TOKEN TYPE
+        -   Use Token Retrieved from the Calls above (Register or Login) and Send the Request.
+        -   You should be able to retrieve CLIENT Records

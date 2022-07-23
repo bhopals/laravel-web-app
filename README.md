@@ -2,25 +2,55 @@
 
 #### laraval-web-app
 
-1. `composer create-project laravel/laravel laravel-web-app`
+0. PREREQUISITE
 
-2. `cd laravel-web-app`
+-   Since Laravel APP need AWS MySql Server and S3 Bucket, so make sure you have
+    already set those up following the steps given in the REPO -https://github.com/bhopals/aws-sdk-lambda-stack-node
 
-3. `php artisan serve`
+-   When you run `cdk deploy`, it may take 8 to 10 minutes to complete.
+-   Once completed, it will OUTPUT MySQL DB and AWS Bucket Configuration.
 
-4. `composer require bref/laravel-bridge --update-with-dependencies`
-   REFER - https://github.com/brefphp/laravel-bridge
+1. Checkout the repo
 
-5. `php artisan vendor:publish --tag=serverless-config`
-   REFER - https://bref.sh/docs/runtimes/https://bref.sh/docs/runtimes/
-   Update the layer versions to latest - ${bref:layer.php-81} / ${bref:layer.php-81-fpm}
+    - `git clone git@github.com:bhopals/laravel-web-app.git`
 
-6. `serverless deploy`
-   Output of this command will return API URL - https://283iupsgdl.execute-api.us-west-2.amazonaws.com
-   Alternatively, you can get the APP URL from APIGATEWAY -> Stage -> URL
+2. Install dependencies
 
-7. DB - Update the .env file with DataBase Connection details
-   Refer for more details - https://laravel.com/docs/9.x/database
+    - `compose install`
+    - `npm install`
 
-8. Request Details
-   Refer - https://laravel.com/docs/9.x/requests#accessing-the-request
+3. Run Migration
+
+    - `php artisan migrate`
+
+4. Rename `.env.example` to `.env`
+
+5. Update ENVIRONMENT VARIABLES (MySql HOST Details and S3 Bucket Configurations)
+
+    - DB (Refer Lambda Environment Variable)
+
+        - DB_CONNECTION=mysql
+        - DB_HOST=<host-to-be-copied-from-stack-output>
+        - DB_PORT=<port-to-be-copied-from-stack-output>
+        - DB_DATABASE=<database-name-to-be-copied-from-stack-output>
+        - DB_USERNAME=<user-name-to-be-copied-from-stack-output>
+        - DB_PASSWORD=<password-to-be-copied-from-stack-output>
+
+    - AWS S3
+
+        - AWS_ACCESS_KEY_ID=<to-be-created-in-aws-iam>
+        - AWS_SECRET_ACCESS_KEY=<to-be-created-in-aws-iam>
+        - AWS_DEFAULT_REGION=us-west-2
+        - AWS_BUCKET=<bucket-name-to-be-copied-from-stack-output>
+
+-   REFERENCE
+    -   Lambda Environment Variables
+        -   https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html
+    -   Create ACCESS KEYs
+        -   https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html
+
+6. Run on local
+   `php artisan serve`
+
+7. Deploy on AWS
+   `serverless deploy`
