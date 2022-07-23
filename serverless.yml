@@ -36,5 +36,5 @@ functions:
       - ${bref:layer.console} # The "console" layer
 
 plugins:
-  # We need to include the Bref plugin
   - ./vendor/bref/bref
+  - serverless-lift
