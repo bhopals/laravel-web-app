@@ -8,3 +8,7 @@
 LIST:
 
 -   https://www.youtube.com/watch?v=38zvoDYiDNo&list=PL4cUxeGkcC9hL6aCFKyagrT1RCfVN4w2Q&index=27
+
+S3 Bucket
+
+-   https://www.youtube.com/watch?v=FmspC3e2LEU
