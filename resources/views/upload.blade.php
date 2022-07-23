@@ -14,7 +14,12 @@
                         </div>
                     @endif
                     <div class="upload container">
-                        <form method="POST" enctype="multipart/form-data"
+                        @csrf
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="file" name="image" />
+                            <button type="submit" name="uploadfile">Upload</button>
+
+                        </form>
                     
 
                     </div>
