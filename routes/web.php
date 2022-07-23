@@ -58,6 +58,8 @@ Route::get('/metadata', 'App\Http\Controllers\ClientController@metadata')->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/upload', [App\Http\Controllers\FileUploadController::class, 'index'])->name('upload');
+
 Auth::routes();
 
 
