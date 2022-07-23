@@ -24,6 +24,8 @@
     - s3bucket = laravel-app-laravelappappdetailsbucket4838ade5-1ma30qousksem
     - s3bucketarn = arn:aws:s3:::laravel-app-laravelappappdetailsbucket4838ade5-1ma30qousksem
 
+    - For more configuration (DB host/user/password/port), check Lambda's Environment Variables
+
 3. Checkout Laravel APP
 
     - Checkout the REPOSITORY - `git clone git@github.com:bhopals/laravel-web-app.git`
