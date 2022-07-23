@@ -38,6 +38,7 @@
 5. Laravel Database Migration
 
     - `php artisan migrate`
+    - `npm install && npm run dev`
 
 6. Deploy Laravel Application
 

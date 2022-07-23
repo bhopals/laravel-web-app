@@ -16,7 +16,11 @@
     -   Download created ACCESS ID and SECRET Details
 
 -   Configure AWS CLI (Use above generated ACCESS and SECRET Details)
+
     -   https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+
+    -   AWS CDK
+        https://docs.aws.amazon.com/cdk/api/v2/
 
 #### TASK 1
 
@@ -24,8 +28,8 @@
 -   Refer - READE.md
 
 -   Documentation
-    -   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda_nodejs-readme.html
-    -   https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-lambda/
+    -   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda_nodejs-readme.html (CDK)
+    -   https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-lambda/ (SDK)
 
 #### TASK 2
 
@@ -40,6 +44,7 @@
         -   https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_rds-readme.html
         -   https://aws.amazon.com/blogs/infrastructure-and-automation/use-aws-cdk-to-initialize-amazon-rds-instances/
         -   https://github.com/aws-samples/amazon-rds-init-cdk
+        -   https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-rds/index.html
 
     -   S3
 
