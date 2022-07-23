@@ -53,7 +53,13 @@ class ClientController extends Controller
     }
 
     public function metadata(Request $request) {
+        $cookie = cookie('test', 'testeststset', 100000);
+
+        $request->session()->put('Developer', 'Bhopal Singh');
         $metadatas = [
+            ['id'=> '------', 'value' => '----METADATA---------------------'],
+            ['id'=> '', 'value' => ''],
+            ['id'=> '------', 'value' => '----Host / URL Details---------------------'],
             ['id'=> 'host', 'value' => $request->host()],
             ['id'=> 'httpHost', 'value' => $request->httpHost()],
             ['id'=> 'schemeAndHttpHost', 'value' => $request->schemeAndHttpHost()],
@@ -62,13 +68,32 @@ class ClientController extends Controller
             ['id'=> 'header', 'value' => $request->header('X-Header-Name')],
             ['id'=> 'bearerToken', 'value' => $request->bearerToken()],
             ['id'=> 'ip', 'value' => $request->ip()],
-//            ['id'=> 'inputs', 'value' => $request->collect()],
-        //   ['id'=> 'all inputs', 'value' => $request->all()],
-   //         ['id'=> 'contentType', 'value' => $request->getAcceptableContentTypes()],
-
+            ['id'=> '', 'value' => ''],
+            ['id'=> '------', 'value' => '----HEADERS---------------------'],
+            ['id'=> 'Headers', 'value' => print_r($request->header(), TRUE)],
+            ['id'=> '', 'value' => ''],
+            ['id'=> '------', 'value' => '----Content and Input---------------------'],
+            ['id'=> 'CONTENT TYPE', 'value' => print_r($request->getAcceptableContentTypes(), TRUE)],
+            ['id'=> 'inputs', 'value' => print_r($request->collect(), TRUE)],
+            ['id'=> 'all inputs', 'value' => print_r($request->all(), TRUE)],
+            ['id'=> '', 'value' => ''],
+            ['id'=> '------', 'value' => '----SESSION---------------------'],
+            ['id'=> 'token', 'value' => $request->session()->get('_token')],
+            ['id'=> 'Session', 'value' => print_r($request->session()->all(), TRUE)],
+            ['id'=> '', 'value' => ''],
+            ['id'=> '------', 'value' => '----COOKIES---------------------'],
+            ['id'=> 'cookies', 'value' => print_r($request->cookie(), TRUE)],
+            ['id'=> '', 'value' => ''],
             
         ];
+
+        error_log('string log');
+        error_log(print_r($request->session()->all(), TRUE));
+        error_log($request->session()->get('_token'));
+        error_log(print_r($request->header(), TRUE));
+        
       return view('metadatas', ['metadatas' => $metadatas]);
     }
+    
 }
 

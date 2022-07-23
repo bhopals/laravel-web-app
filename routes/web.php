@@ -54,7 +54,7 @@ Route::delete('/clients/{id}', 'App\Http\Controllers\ClientController@destroy')-
 
 Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where')->middleware('auth');
 
-Route::get('/metadata', 'App\Http\Controllers\ClientController@metadata')->middleware('auth');
+Route::get('/metadata', 'App\Http\Controllers\ClientController@metadata')->name('clients.metadata')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

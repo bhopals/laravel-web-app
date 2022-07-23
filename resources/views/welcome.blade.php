@@ -27,6 +27,9 @@
         @if (Route::has('login'))
             @auth
                 <a href="{{ route('clients.index') }}"><b><u>Show client</u></b></a>
+                <br/>
+                <a href="{{ route('clients.metadata') }}"><b><u>Show metadata</u></b></a>
+
             @endauth
         @endif
         

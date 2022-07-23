@@ -16,6 +16,9 @@
 
                     {{ __('You are logged in!') }}
                     <a href="{{ route('clients.index') }}"><b><u>Show client</u></b></a>
+                    <br/>
+                    <a href="{{ route('clients.metadata') }}"><b><u>Show metadata</u></b></a>
+
                 </div>
             </div>
         </div>

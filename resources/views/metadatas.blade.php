@@ -23,10 +23,9 @@
     <body class="antialiased">
         
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <div >MetaDataList List:</div> 
             <div class="ml-12">
                 @foreach($metadatas as $metadata)
-                    <div class="ml-12">
+                    <div class="ml-12" style="word-break: break-all;">
                         {{ $metadata['id']}}  - {{ $metadata['value']}} 
                     </div>
                 @endforeach
