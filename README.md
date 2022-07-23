@@ -43,6 +43,10 @@
         - AWS_DEFAULT_REGION=us-west-2
         - AWS_BUCKET=<bucket-name-to-be-copied-from-stack-output>
 
+    - PASSPORT Public/Private Key (Refer Doc - `REAMDME_PASSPORT.md`)
+        - PASSPORT_PUBLIC_KEY=<you-need-to-generate>
+        - PASSPORT_PRIVATE_KEY=<you-need-to-generate>
+
 -   REFERENCE
     -   Lambda Environment Variables
         -   https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html
