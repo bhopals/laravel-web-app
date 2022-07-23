@@ -12,6 +12,26 @@
 -   Install passport to get the scaffolding setup for passport
     `php artisan passport:install`
 
+-   Secret KEYS
+
+    -   Generate Keys - `php artisan passport:keys --force`
+    -   Add Passport config to use env keys - `php artisan vendor:publish --tag=passport-config`
+    -   Update ENV variables
+
+        ```
+        PASSPORT_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----
+        <private key here>
+        -----END RSA PRIVATE KEY-----"
+        ```
+
+        ```
+        PASSPORT_PUBLIC_KEY="-----BEGIN PUBLIC KEY-----
+        <public key here>
+        -----END PUBLIC KEY-----"
+        ```
+
+    -   REFER - https://laravel.com/docs/9.x/passport#deploying-passport
+
 REFERENCE - https://laravel.com/docs/9.x/passport#installation
 
 #### Configuration
