@@ -180,7 +180,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel-web-app/dev/1658670514108-2022-07-24T13:48:34.108Z/laravel-web-app.zip"
+                "S3Key": "serverless/laravel-web-app/dev/1658672984968-2022-07-24T14:29:44.968Z/laravel-web-app.zip"
               },
               "Handler": "public/index.php",
               "Runtime": "provided.al2",
@@ -208,7 +208,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel-web-app/dev/1658670514108-2022-07-24T13:48:34.108Z/laravel-web-app.zip"
+                "S3Key": "serverless/laravel-web-app/dev/1658672984968-2022-07-24T14:29:44.968Z/laravel-web-app.zip"
               },
               "Handler": "artisan",
               "Runtime": "provided.al2",
@@ -230,24 +230,24 @@
               "ArtisanLogGroup"
             ]
           },
-          "WebLambdaVersionTnGGfHC9CmrJLxFRJ23KO5SalMKG1sNy63aNskTo": {
+          "WebLambdaVersionh5JNTmQ2VOnnkwHOEb26jFSXvtRLGs6aDJWQmwbjLw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "WebLambdaFunction"
               },
-              "CodeSha256": "SwnZ+9ILo4aCVIH6DnL0idbAah24pkQXPGQv/KUbvhc="
+              "CodeSha256": "Tl8IP4cZJ63P8bbTNqAHNimckI/gzGmuBcReRpoEUiM="
             }
           },
-          "ArtisanLambdaVersioncm2WOEgTBQLserdYt9gPgfNjcCg1g8Do72tAztoEh8": {
+          "ArtisanLambdaVersionM7XIdUsWSZyhT9QWHYuAVSLv4y5LhNP8wTcD6sN7jI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ArtisanLambdaFunction"
               },
-              "CodeSha256": "SwnZ+9ILo4aCVIH6DnL0idbAah24pkQXPGQv/KUbvhc="
+              "CodeSha256": "Tl8IP4cZJ63P8bbTNqAHNimckI/gzGmuBcReRpoEUiM="
             }
           },
           "HttpApi": {
@@ -355,7 +355,7 @@
           "WebLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "WebLambdaVersionTnGGfHC9CmrJLxFRJ23KO5SalMKG1sNy63aNskTo"
+              "Ref": "WebLambdaVersionh5JNTmQ2VOnnkwHOEb26jFSXvtRLGs6aDJWQmwbjLw"
             },
             "Export": {
               "Name": "sls-laravel-web-app-dev-WebLambdaFunctionQualifiedArn"
@@ -364,7 +364,7 @@
           "ArtisanLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ArtisanLambdaVersioncm2WOEgTBQLserdYt9gPgfNjcCg1g8Do72tAztoEh8"
+              "Ref": "ArtisanLambdaVersionM7XIdUsWSZyhT9QWHYuAVSLv4y5LhNP8wTcD6sN7jI"
             },
             "Export": {
               "Name": "sls-laravel-web-app-dev-ArtisanLambdaFunctionQualifiedArn"
@@ -516,7 +516,7 @@
         "memory": 1024,
         "runtime": "provided.al2",
         "vpc": {},
-        "versionLogicalId": "WebLambdaVersionTnGGfHC9CmrJLxFRJ23KO5SalMKG1sNy63aNskTo"
+        "versionLogicalId": "WebLambdaVersionh5JNTmQ2VOnnkwHOEb26jFSXvtRLGs6aDJWQmwbjLw"
       },
       "artisan": {
         "handler": "artisan",
@@ -530,7 +530,7 @@
         "memory": 1024,
         "runtime": "provided.al2",
         "vpc": {},
-        "versionLogicalId": "ArtisanLambdaVersioncm2WOEgTBQLserdYt9gPgfNjcCg1g8Do72tAztoEh8"
+        "versionLogicalId": "ArtisanLambdaVersionM7XIdUsWSZyhT9QWHYuAVSLv4y5LhNP8wTcD6sN7jI"
       }
     },
     "resources": {
@@ -590,10 +590,10 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/bsingh/Desktop/DEMOS/laravel-web-app/.serverless/laravel-web-app.zip"
+    "artifact": "/Users/bsingh/git-repos/laravel-web-app/.serverless/laravel-web-app.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/laravel-web-app/dev/1658670514108-2022-07-24T13:48:34.108Z",
+    "artifactDirectoryName": "serverless/laravel-web-app/dev/1658672984968-2022-07-24T14:29:44.968Z",
     "artifact": "laravel-web-app.zip"
   }
 }
