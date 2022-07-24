@@ -22,6 +22,7 @@
 3. Install Passport to generate Personal access
 
     `php artisan passport:install --force`
+
     `php artisan vendor:publish --tag=passport-config`
 
 4. Rename `.env.example` to `.env`
