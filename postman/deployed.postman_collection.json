@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "0d8373c4-aa28-42cc-8a44-6c1e49acbc1a",
+		"name": "deployed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"postman4\",\n    \"email\": \"postman4@test.com\",\n    \"password\": \"postman123456\",\n    \"c_password\": \"postman123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oipwbcpw1a.execute-api.us-west-2.amazonaws.com/api/register",
+					"protocol": "https",
+					"host": [
+						"oipwbcpw1a",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"postman4@test.com\",\n    \"password\": \"postman123456\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oipwbcpw1a.execute-api.us-west-2.amazonaws.com/api/login",
+					"protocol": "https",
+					"host": [
+						"oipwbcpw1a",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Clients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGVlYzRkNWE3NmUyN2EyNjVhZWFlNmY5NGZmY2Y3YmY2YmU3ZTYxYTBhYTJlN2M1MGM5NzQ3NmJjOWI2NTQ1MjU1NTQ5MzgyMDQzNmJiZTQiLCJpYXQiOjE2NTg2MTU0MTUuODQwNzQ2LCJuYmYiOjE2NTg2MTU0MTUuODQwNzQ5LCJleHAiOjE2OTAxNTE0MTUuNjg3Nzg2LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.pibYvhjmxvg2yL67RVJcqDWy7hv14OnPMOz71qD0Rxq8STyojyUH-NJKg9jAEQAR14XogsxS7vSM2OsBMt-RX8i7rhGfB-ueHdYYg4WzKwQhY63OjtwiZvdBn8qtUPdVqtaG1qXro5pwfb13FKLNYoR96gfAeBZgAONhIFIWfp8w3v74Vk3q_KcnBjM_xIaqtnzYZ0PtCC982ICOb5rRExCSDdiCsqLjE4PEShp9-V--RV-PQbabW1sCrjBoMbd6iNAdUbSSelub7ombN-3-lraVtQWgwC98_A2ln-ejPA3L9qa4vgSbtMXa2CZyoFZpY2xVH1zLDlgFs3nnYVcPGWyq-12JSbuABH-ow9ZR6H-uLDVQWzQk_QPLnhHgAFHq-kxQvsuFXgLAE4om6C7j65DllxywH_dSCQkhf6zoEOEF7VutqchmWmU5jKJ48Biys10o9AWFdI6uswRD-Eam6Eklq5JBc0KNFuc7vZdyXZuclBVHiDta5uYLfnK6lFfD8jmxSuYmkS6SFiiP0dYLkDc-RSTntVceh3iDp3WJozYTfIqNgrul7WKcBkxZTpzOOTbvZP6ycsPbLVkTnQ3XaKAlAE7Y18idlbD3HuJK51M9j7u82mjfTMAMnhp8vXZZlWo0SRo64erX91mjmTQqoIUlutbFBqPJpXRYxOP5CmI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://oipwbcpw1a.execute-api.us-west-2.amazonaws.com/api/clients",
+					"protocol": "https",
+					"host": [
+						"oipwbcpw1a",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

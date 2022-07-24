@@ -19,13 +19,9 @@
     - `compose install`
     - `npm install`
 
-3. Run Migration
+3. Rename `.env.example` to `.env`
 
-    - `php artisan migrate`
-
-4. Rename `.env.example` to `.env`
-
-5. Update ENVIRONMENT VARIABLES (MySql HOST Details and S3 Bucket Configurations)
+4. Update ENVIRONMENT VARIABLES (MySql HOST Details and S3 Bucket Configurations)
 
     - DB (Refer Lambda Environment Variable)
 
@@ -53,8 +49,17 @@
     -   Create ACCESS KEYs
         -   https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html
 
-6. Run on local
-   `php artisan serve`
+5. Run Migration
 
-7. Deploy on AWS
+    - `php artisan migrate`
+
+6. Install Passport to generate Personal access
+
+    `php artisan passport:install`
+
+7. Run on local
+
+    `php artisan serve`
+
+8. Deploy on AWS
    `serverless deploy`
