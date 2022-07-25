@@ -16,7 +16,7 @@
 
 2. Install dependencies
 
-    - `compose install`
+    - `composer install`
     - `npm install`
 
 3. Install Passport to generate Personal access
