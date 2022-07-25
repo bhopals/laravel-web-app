@@ -65,3 +65,7 @@
 
 7. Deploy on AWS
    `serverless deploy`
+
+
+7. Remove deployed resource from AWS
+   `serverless remove`
