@@ -13,7 +13,7 @@
     AWS_DEFAULT_REGION=<REGION>
     AWS_BUCKET=<BUCKET-NAME>
 
--   AWS S3 Bucket should have a Policy attached...
+-   AWS S3 Bucket should have a Policy attached...(inline policy)
 -   Attach Policy
 
     ```
