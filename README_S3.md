@@ -14,7 +14,7 @@
     AWS_BUCKET=<BUCKET-NAME>
 
 -   CREATE A S3 Bucket
--   AWS S3 Bucket should have a Policy attached...
+-   AWS S3 Bucket should have a Policy attached...(inline policy)
 -   Attach Policy
 
     ```
