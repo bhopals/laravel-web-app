@@ -56,7 +56,7 @@ Route::get('/clients/code/{code}', 'App\Http\Controllers\ClientController@where'
 
 -   Create a Controller
     `php artisan make:controller ClientController`
-    It will create a Controller in `Http/Controllers/`
+    It will create a Controller in `Http/Controllers/<ControllerName>`
 
 -   Create Two methods (`index` and `show`)
     `public function index(){...}`
