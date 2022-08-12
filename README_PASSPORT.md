@@ -80,6 +80,7 @@ REFERENCE - https://laravel.com/docs/9.x/passport#configuration
             "password": "postman123456",
             "c_password": "postman123456"
         }
+
         ```
 
     -   Login Client
